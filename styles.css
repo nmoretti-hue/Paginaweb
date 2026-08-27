@@ -50,7 +50,7 @@ p {
 }
 
 .dropdown-menu {
-  background-color: #9393eb;
+  background-color: #666666;
 }
 
 .dropdown-item {
@@ -71,3 +71,17 @@ p {
   object-fit: cover;
   z-index: -1;
 }
+
+.carrusel-chico {
+  width: 300px;
+  float: right;
+  margin: 20px;
+}
+
+.carrusel-chico .carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
