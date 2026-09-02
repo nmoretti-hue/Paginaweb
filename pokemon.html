@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Moretti</a>
+        <a class="navbar-brand" href="https://www.instagram.com/bocajrs/">Moretti</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,24 +28,68 @@
                 Proyects
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="JuegoDelCalamar.html">Juego del calamar</a></li>
+                <li><a class="dropdown-item" href="JuegoDelCalamar.html">Juego Del Calamar</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="ReproductorDeMusica.html">Reproductor de musica</a></li>
               </ul>
             </li>
           </ul>
+          <button class="btn-dark-mode" onclick="myFunction()">🌙 Modo Dark</button>
         </div>
       </div>
     </nav>
 
-    
+    <div class="text-center">
+        <h1 id="home">POKEMON</h1>
+        <p id="description">Este juego fue desarrollado por mi<br>En este juego fue un trabajo con nota que realice
+        El proyecto en ser terminado tardo varias clases<br>
+        Me saque un 8 en este proyecto</p>
+    </div>
 
-
-
+    <div class="d-flex justify-content-center my-4">
+      <div id="carouselExampleIndicators" class="carousel slide carrusel-grande" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagenes/pokemonardo.jfif" class="d-block w-100 carrusel-img" alt="menu">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/Capturapokemon.png" class="d-block w-100 carrusel-img" alt="cristales">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/segundaCapturapokemon.png" class="d-block w-100 carrusel-img" alt="rope">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
     <video autoplay muted loop id="video-fondo">
       <source src="videos/background.mp4" type="video/mp4">
     </video>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+
+      var video = document.getElementById("video-fondo");
+      video.style.filter = element.classList.contains("dark-mode")
+        ? "brightness(0.25)"
+        : "brightness(1)";
+    }
+    </script>
 </body>
 </html>

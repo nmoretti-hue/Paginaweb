@@ -34,44 +34,45 @@
               </ul>
             </li>
           </ul>
+          <button class="btn-dark-mode" onclick="myFunction()">🌙 Modo Dark</button>
         </div>
       </div>
     </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide carrusel-chico" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="imagenes/menu.png" class="d-block w-100" alt="menu">
-        </div>
-        <div class="carousel-item">
-          <img src="imagenes/cristales.png" class="d-block w-100" alt="cristales">
-        </div>
-        <div class="carousel-item">
-          <img src="imagenes/rope.png" class="d-block w-100" alt="rope">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
     <div class="text-center">
         <h1 id="home">EL JUEGO DEL CALAMAR</h1>
-        <p id="description">Este juego fue desarrollado por mi y 2 amigos</p>
-        <p id="description"></p>
-        <p id="description">En este juego yo me encargue de los sprites y del menu</p>
-        <p id="description">Fue un proyecto que nos costo mitad de año</p>
-        <p id="description">Lo expusimos en la expohuergo y no lo jugo nadie</p>
+        <p id="description">Este juego fue desarrollado por mi y mis dos compañeros<br>En este juego fue un trabajo con nota en el que me encargue de los sprites y el menu
+        El proyecto en ser terminado tardo varias clases<br>
+        Lo expusimos en la ExpoHuergo y nadie lo jugo</p>
+    </div>
+
+    <div class="d-flex justify-content-center my-4">
+      <div id="carouselExampleIndicators" class="carousel slide carrusel-grande" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagenes/menu.png" class="d-block w-100 carrusel-img" alt="menu">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/rope.png" class="d-block w-100 carrusel-img" alt="cristales">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/cristales.png" class="d-block w-100 carrusel-img" alt="rope">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
     <video autoplay muted loop id="video-fondo">
@@ -79,5 +80,16 @@
     </video>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+
+      var video = document.getElementById("video-fondo");
+      video.style.filter = element.classList.contains("dark-mode")
+        ? "brightness(0.25)"
+        : "brightness(1)";
+    }
+    </script>
 </body>
 </html>
